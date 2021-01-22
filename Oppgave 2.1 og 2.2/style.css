@@ -1,4 +1,11 @@
-html, body {margin: 0; height: 100%; overflow: hidden}
+@media (max-width: 800px) {
+    .gridy {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr;
+    }
+}
+
 body {
     font-family: "adobe-clean", sans-serif;
 }
@@ -27,11 +34,11 @@ body {
     top: 12%;
     position: absolute;
     width: 500px;
-    height: 50px;
-    text-size-adjust: 18;
+    height: 25px;
+    text-size-adjust: 18px;
     border-radius: 7px;
     border: 1px solid black;
-    padding: 20px;
+    padding: 10px;
 }
 #textareatitle {
     position: absolute;
@@ -70,8 +77,12 @@ textarea {
     background-color:#176263;
 }
 #gridsection{
+
+    width: 1050px;
+    height: 400px;
     grid-gap: 5px 5px; 
-    margin: 425;
+    margin-top: 400px;
+    margin-left: 400px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -100,4 +111,7 @@ textarea {
     left: 22%;
     bottom: 48%;
 }
-
+/*.gridy:nth-child(2) {
+    background: red;
+  }
+*/
