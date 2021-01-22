@@ -2,6 +2,10 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 body {
     font-family: "adobe-clean", sans-serif;
 }
+#navi{
+    height: 60px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
 #userfield{
     right: 10%;
     top: 0%;
@@ -9,17 +13,17 @@ body {
 }
 #hioflogo{
     position:absolute;
-    left: 17%;
+    left: 16%;
     top: 0%;
     font-weight: 800;
 }
 #titlelabel{
-    left: 24%;
+    left: 22%;
     top: 10%;
     position: absolute;
 }
 #titleinput{
-    left: 24%;
+    left: 22%;
     top: 12%;
     position: absolute;
     width: 500px;
@@ -31,13 +35,13 @@ body {
 }
 #textareatitle {
     position: absolute;
-    left: 24%;
+    left: 22%;
     top: 18%;
 
 }
 textarea {
     position:absolute;
-    left: 24%;
+    left: 22%;
     top: 22%;
     resize:none;
     display: inline-block;
@@ -51,15 +55,19 @@ textarea {
 #contentbtn{
     font-size: 18px;
     font-weight: bold;
-    left:68%;
+    left:66%;
     top: 46%;
     width: 175px;
     position: absolute;
     padding: 10px;
     border-radius: 7px;
     border: 1px;
-    background-color: cyan;
-    color:white
+    background-color:#6ad2b3;
+    color:white;
+    transition-duration: 0.4s;
+}
+#contentbtn:hover{
+    background-color:#176263;
 }
 #gridsection{
     grid-gap: 5px 5px; 
@@ -76,15 +84,20 @@ textarea {
     padding: 10px;
     border-radius: 7px;
     border: 1px;
-    background-color: cyan;
+    background-color: #6ad2b3;
     color:white;
     font-size: 14px;
     font-weight: bold;
     float:right;
+    transition-duration: 0.4s;
+}
+.button2:hover{
+    background-color:#176263;
 }
 #todos{
     position:absolute;
     font-weight: 800;
-    left: 23%;
-    bottom: 45%;
+    left: 22%;
+    bottom: 48%;
 }
+
