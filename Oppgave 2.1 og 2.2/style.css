@@ -1,14 +1,26 @@
+html, body {margin: 0; height: 100%; overflow: hidden}
 body {
     font-family: "adobe-clean", sans-serif;
 }
+#userfield{
+    right: 10%;
+    top: 0%;
+    position: absolute;
+}
+#hioflogo{
+    position:absolute;
+    left: 17%;
+    top: 0%;
+    font-weight: 800;
+}
 #titlelabel{
-    left: 25%;
-    top: 18%;
+    left: 24%;
+    top: 10%;
     position: absolute;
 }
 #titleinput{
-    left: 25%;
-    top: 20%;
+    left: 24%;
+    top: 12%;
     position: absolute;
     width: 500px;
     height: 50px;
@@ -19,14 +31,14 @@ body {
 }
 #textareatitle {
     position: absolute;
-    left: 25%;
-    top: 26%;
+    left: 24%;
+    top: 18%;
 
 }
 textarea {
     position:absolute;
-    left: 25%;
-    top: 30%;
+    left: 24%;
+    top: 22%;
     resize:none;
     display: inline-block;
  }
@@ -39,8 +51,8 @@ textarea {
 #contentbtn{
     font-size: 18px;
     font-weight: bold;
-    left:69%;
-    top: 55%;
+    left:68%;
+    top: 46%;
     width: 175px;
     position: absolute;
     padding: 10px;
@@ -48,4 +60,31 @@ textarea {
     border: 1px;
     background-color: cyan;
     color:white
+}
+#gridsection{
+    grid-gap: 5px 5px; 
+    margin: 425;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.gridy {
+    padding: 1rem;
+}
+.button2{
+    width: 90px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px;
+    background-color: cyan;
+    color:white;
+    font-size: 14px;
+    font-weight: bold;
+    float:right;
+}
+#todos{
+    position:absolute;
+    font-weight: 800;
+    left: 23%;
+    bottom: 45%;
 }
