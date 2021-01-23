@@ -1,0 +1,133 @@
+
+html, body {margin: 0; height: 100%; overflow-x: hidden}
+body {
+    font-family: "adobe-clean", sans-serif;
+}
+#navi{
+    height: 60px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+#userfield{
+    right: 10%;
+    top: 0%;
+    position: absolute;
+}
+#hioflogo{
+    position:absolute;
+    left: 16%;
+    top: 0%;
+    font-weight: 800;
+}
+#main{
+    width: 1000px;
+    left:25%;
+    float:center;
+    position: absolute;
+}
+#titlelabel{
+    top: 4%;
+    position: absolute;
+}
+#titleinput{
+    top: 7%;
+    position: absolute;
+    width: 25%;
+    height: 25px;
+    text-size-adjust: 18px;
+    border-radius: 7px;
+    border: 1px solid black;
+    padding: 10px;
+}
+#textareatitle {
+    position: absolute;
+    top: 12%;
+
+}
+#ta1{
+    width:  calc(47vw); 
+    height: calc(15vh);
+    position:absolute;
+    top: 17%;
+    resize:none;
+    display: inline-block;
+    text-size-adjust: 18;
+    border-radius: 7px;
+    border: 1px solid black;
+    padding: 20px;
+}
+#contentbtn{
+    font-size: 18px;
+    font-weight: bold;
+    left:85%;
+    top: 42%;
+    width: 175px;
+    position: absolute;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px;
+    background-color:#6ad2b3;
+    color:white;
+    transition-duration: 0.4s;
+}
+#contentbtn:hover{
+    background-color:#176263;
+}
+#gridsection{
+    width: 1050px;
+    grid-gap: 5px 5px; 
+    margin-top: 42%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.gridy {
+    padding: 1rem;
+}
+.button2{
+    width: 90px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px;
+    background-color: #6ad2b3;
+    color:white;
+    font-size: 14px;
+    font-weight: bold;
+    float:right;
+    transition-duration: 0.4s;
+}
+.button2:hover{
+    background-color:#176263;
+}
+#todos{
+    position:absolute;
+    font-weight: 800;
+    top: 50%;
+}
+@media (max-width: 800px) {
+    #gridsection {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr;
+        width:  calc(47vw); 
+        height: calc(15vh);
+    }
+    #ta1{
+        top:21%;
+    }
+    #textareatitle{
+        top:15%;
+    }
+    #todos{
+        top:60%;
+    }
+    #contentbtn{
+        top:50%;
+        left: 0%;
+        position:absolute;
+    }
+}
+
+/*.gridy:nth-child(2) {
+    background: red;
+  }
+*/
