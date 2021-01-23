@@ -1,11 +1,6 @@
-@media (max-width: 800px) {
-    .gridy {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows:1fr;
-    }
-}
+@@ -0,0 +1,133 @@
 
+html, body {margin: 0; height: 100%; overflow-x: hidden}
 body {
     font-family: "adobe-clean", sans-serif;
 }
@@ -24,16 +19,20 @@ body {
     top: 0%;
     font-weight: 800;
 }
+#main{
+    width: 1000px;
+    left:25%;
+    float:center;
+    position: absolute;
+}
 #titlelabel{
-    left: 22%;
-    top: 10%;
+    top: 4%;
     position: absolute;
 }
 #titleinput{
-    left: 22%;
-    top: 12%;
+    top: 7%;
     position: absolute;
-    width: 500px;
+    width: 25%;
     height: 25px;
     text-size-adjust: 18px;
     border-radius: 7px;
@@ -42,18 +41,16 @@ body {
 }
 #textareatitle {
     position: absolute;
-    left: 22%;
-    top: 18%;
+    top: 12%;
 
 }
-textarea {
+#ta1{
+    width:  calc(47vw); 
+    height: calc(15vh);
     position:absolute;
-    left: 22%;
-    top: 22%;
+    top: 17%;
     resize:none;
     display: inline-block;
- }
-#ta1{
     text-size-adjust: 18;
     border-radius: 7px;
     border: 1px solid black;
@@ -62,8 +59,8 @@ textarea {
 #contentbtn{
     font-size: 18px;
     font-weight: bold;
-    left:66%;
-    top: 46%;
+    left:85%;
+    top: 42%;
     width: 175px;
     position: absolute;
     padding: 10px;
@@ -77,12 +74,9 @@ textarea {
     background-color:#176263;
 }
 #gridsection{
-
     width: 1050px;
-    height: 400px;
     grid-gap: 5px 5px; 
-    margin-top: 400px;
-    margin-left: 400px;
+    margin-top: 42%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -108,9 +102,32 @@ textarea {
 #todos{
     position:absolute;
     font-weight: 800;
-    left: 22%;
-    bottom: 48%;
+    top: 50%;
 }
+@media (max-width: 800px) {
+    #gridsection {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr;
+        width:  calc(47vw); 
+        height: calc(15vh);
+    }
+    #ta1{
+        top:21%;
+    }
+    #textareatitle{
+        top:15%;
+    }
+    #todos{
+        top:60%;
+    }
+    #contentbtn{
+        top:50%;
+        left: 0%;
+        position:absolute;
+    }
+}
+
 /*.gridy:nth-child(2) {
     background: red;
   }
