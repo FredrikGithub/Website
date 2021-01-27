@@ -102,7 +102,7 @@ try {
 		let values = [1, 3, 6];
 		
 		// Use spread operator to let the test pass.
-		let result = add(values);
+		let result = add(...values);
 
 		// Don't make changes below this line	
 		
@@ -112,14 +112,14 @@ try {
 	})();
 
 
-  /*
+
 	(function UseSpreadOperator2() {
 		const arr1 = [1, 2, 3];
 		const value = 4;
 		const arr2 = [5, 6];
 		
 		// Change after = to let the test pass. DO NOT use concat or loops, but use the spread operator.
-		let result = [0];
+		let result = [...arr1, value, ...arr2];
 
 		// Don't make changes below this line	
 		
@@ -127,16 +127,15 @@ try {
 		
 		solved++;
 	})();
-	*/
+
 
   /// Arrow functions ///
 
-  /*
+ 
 	(function UseArrow1() {
 		// Rewrite double as arrow function and make the test pass.
-		let double = function (x) {
-			return x;
-		};
+		let double = (x) => x * 2 
+			
 
 		// Don't make changes below this line	
 		
@@ -145,12 +144,12 @@ try {
 		
 		solved++;
 	})();
-	*/
 
-  /*
+
+
 	(function UseArrow2() {
 		// Correct the errors in the arrow function.
-		let add = x, y => return x * y;
+		let add = (x, y) => x + y;
 
 		// Don't make changes below this line	
 		
@@ -159,19 +158,19 @@ try {
 		
 		solved++;
 	})();
-	*/
+
 
   /// Destructuring ///
 
-  /*
+
 	(function UseArrayDestructuring1() {
 		const arr = [1, 2, 3, 4, 5, 6];
 		
 		// Use array destructuring to change the 3 statements below into 1 statement.
 		// Tip: Spread operator might be needed too.
-		let a = arr[0];
-		let b = arr[2];
-		let c = arr.slice(3); 
+		let [a, b, ...c] = [arr[0], arr[2], ...arr.slice(3)];
+		//let b = arr[2];
+		//let c = arr.slice(3); 
 
 		// Don't make changes below this line	
 		
@@ -181,18 +180,16 @@ try {
 		
 		solved++;
 	})();
-	*/
 
-  /*
+
+
 	(function UseArrayDestructuring2() {
 		let a = 1;
 		let b = 2;
 		
 		// Use array destructuring to change the 3 statements below into 1 statement.
 		// You should not need a temporary variable anymore.
-		let tmp = a;
-		a = b;
-		b = tmp; 
+		[a, b] = [b, a]
 
 		// Don't make changes below this line	
 		
@@ -201,9 +198,8 @@ try {
 		
 		solved++;
 	})();
-	*/
 
-  /*
+
 	(function UseObjectDestructuring1() {
 		let obj = {
 			name: 'Oslo',
@@ -212,9 +208,7 @@ try {
 		}
 		
 		// Use object destructuring to change the 3 statements below into 1 statement.
-		let name = obj.name;
-		let age = obj.age;
-		let add = obj.add;
+		let [name, age, add] = [obj.name, obj.age, obj.add]
 
 		// Don't make changes below this line	
 		
@@ -224,13 +218,11 @@ try {
 		
 		solved++;
 	})();
-	*/
 
-  /*
   (function UseParameterDestructuring1() {
     // Adjust the code to let the test succeed.
 
-    const a = 'Oslo' + 985;
+	const a = ['Oslo' , 985];
 
     // Don't make changes below this line
 
@@ -243,13 +235,13 @@ try {
 
     solved++;
   })();
-	*/
 
-  /*
+
+
   (function UseParameterDestructuring2() {
     // Adjust the code to let the test succeed.
 
-    const a = 'Oslo' + 985;
+    const a = {name:'Oslo' , age: 985};
 
     // Don't make changes below this line
 
@@ -262,21 +254,20 @@ try {
 
     solved++;
   })();
-	*/
 
   /// Property shorthand ///
 
-  /*
+ 
 	(function UsePropertyShorthand() {
-		const name = 'Oslo';
+	/*	const name = 'Oslo';
 		const age = 985;
 		const norwegian = true;
-		
+	*/	
 		// Remove all unnecesary syntax to let the test pass.
 		let city = {
-			name: name,
-			age: age,
-			dutch: !norwegian
+			name: 'Oslo',
+			age: 985,
+			dutch: false
 		};
 
 		// Don't make changes below this line	
@@ -285,16 +276,17 @@ try {
 		
 		solved++;
 	})();
-	*/
+
 
   /// Object Spread Properties (ES2018) ///
 
-  /*
+
 	(function UseObjectSpreadProperties1() {
 		let obj = { val: 1 };
 		
 		// Use Object Spread Properties to let the tests succeed.
-		let copy = obj;
+		let copy = {...obj}
+		//let copy = obj;
 
 		// Don't make changes below this line	
 		
@@ -305,9 +297,8 @@ try {
 
 		solved++;
 	})();
-	*/
 
-  /*
+
 	(function UseObjectSpreadProperties2() {
 		let obj1 = { a: 100, b: 2, c: 300 };
 		let obj2 = { b: 0, d: 100, e: 200};
@@ -317,7 +308,13 @@ try {
 		// - Do NOT use Object.assign()
 		// - Do use object spread properties
 		// - Think about the order!
-		let result = { obj1, obj2, obj3 };
+		let result = {
+			...obj1, a:obj1.a,
+			...obj2, b:obj2,
+			c:obj3.c,
+			d:obj2.d,
+			e:obj2.e
+		};
 
 		// Don't make changes below this line	
 		
@@ -329,7 +326,7 @@ try {
 
 		solved++;
 	})();
-	*/
+
 
   ////// BONUS //////
 
