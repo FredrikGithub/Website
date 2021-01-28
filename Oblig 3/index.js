@@ -309,11 +309,9 @@ try {
 		// - Do use object spread properties
 		// - Think about the order!
 		let result = {
-			...obj1, a:obj1.a,
-			...obj2, b:obj2,
-			c:obj3.c,
-			d:obj2.d,
-			e:obj2.e
+			...obj1,
+			...obj2,
+			c: obj3.c
 		};
 
 		// Don't make changes below this line	
