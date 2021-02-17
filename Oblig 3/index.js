@@ -164,7 +164,7 @@ try {
 		
 		// Use array destructuring to change the 3 statements below into 1 statement.
 		// Tip: Spread operator might be needed too.
-		let [a, b, ...c] = [arr[0], arr[2], ...arr.slice(3)];
+		let [a, ,b, ...c] = arr
 
 		// Don't make changes below this line	
 		
