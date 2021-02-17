@@ -56,12 +56,9 @@ try {
 
 	(function UseDefaultParameters() {
 		// Correct the syntax errors in the function.
-		function hello(who) {
-			if (who == undefined){
-				who = "World"
-			}
+		function hello(who = "World") {
 			return 'Hello ' + who + '!';
-		};
+			};
 
 		// Don't make changes below this line	
 
@@ -77,9 +74,8 @@ try {
 	(function UseRestParameter() {
 		// Add just one rest parameter and use the number of elements in this parameter 
 		// (What is the name of that property?) in the return statement to let the test pass.
-		function foo(a, b,...args) {
-			let c = args.length
-			return a + b + c;
+		function foo(a, b,...c) {
+			return a + b + c.length;
 		}
 
 		// Don't make changes below this line	
@@ -169,8 +165,6 @@ try {
 		// Use array destructuring to change the 3 statements below into 1 statement.
 		// Tip: Spread operator might be needed too.
 		let [a, b, ...c] = [arr[0], arr[2], ...arr.slice(3)];
-		//let b = arr[2];
-		//let c = arr.slice(3); 
 
 		// Don't make changes below this line	
 		
@@ -205,11 +199,9 @@ try {
 			name: 'Oslo',
 			age: 985,
 			add: (x, y) => x + y
-		}
-		
+		};
 		// Use object destructuring to change the 3 statements below into 1 statement.
-		let [name, age, add] = [obj.name, obj.age, obj.add]
-
+		const {name, age, add} = obj;
 		// Don't make changes below this line	
 		
 		expect(name).toBe('Oslo');
@@ -259,17 +251,16 @@ try {
 
  
 	(function UsePropertyShorthand() {
-	/*	const name = 'Oslo';
+		const name = 'Oslo';
 		const age = 985;
 		const norwegian = true;
-	*/	
+	
 		// Remove all unnecesary syntax to let the test pass.
 		let city = {
-			name: 'Oslo',
-			age: 985,
-			dutch: false
+			name,
+			age,
+			dutch: !norwegian
 		};
-
 		// Don't make changes below this line	
 		
 		expect(city).toEqual({name: 'Oslo', age: 985, dutch: false});
@@ -310,8 +301,8 @@ try {
 		// - Think about the order!
 		let result = {
 			...obj1,
-			...obj2,
-			c: obj3.c
+			...obj3,
+			...obj2
 		};
 
 		// Don't make changes below this line	
@@ -348,10 +339,17 @@ try {
 
   /// class (bonus) ///
 
-  /*
+
 	(function UseClass() {
 		// Let Multiplier be a class with the appropriate methods to succeed.
-		let Multiplier = 'class';
+		let Multiplier = class{
+			constructor(num){
+				this.num = num
+			};
+			multiply (num){
+				return this.num * num;
+			}
+		};
 
 		// Don't make changes below this line	
 		
@@ -361,14 +359,15 @@ try {
 		
 		solvedBonus++;
 	})();
-	*/
+
 
   /// Template strings (bonus) ///
 
-  /*
+
 	(function UseTemplateStrings2() {
 		// Rewrite the line below to use a template string.
-		const text = 'line 1line 2';
+		const text = `line 1\nline 2`;
+
 
 		// Don't make changes below this line	
 		
@@ -376,11 +375,11 @@ try {
 		
 		solvedBonus++;
 	})();
-	*/
+
 
   /// Arrow functions (bonus) ///
 
-  /*
+
 	(function UseArrow3() {
 		// Rewrite all functions as arrow functions. Use as minimal syntax as possible.
 		let one = function () { return 1; };
@@ -402,7 +401,7 @@ try {
 		
 		solvedBonus++;
 	})();
-	*/
+
 
   /// Destructuring (bonus) ///
 
