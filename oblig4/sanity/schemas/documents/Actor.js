@@ -1,11 +1,11 @@
 const Actor = {
-    title: "Actor",
-    name: "Actor",
-    type: "document",
+    title: 'actor',
+    name: 'actor',
+    type: 'document',
     fields: [
         {
-        name: "name",
-        type: "string"
+        name: 'name',
+        type: 'string'
         }
     ],
 }

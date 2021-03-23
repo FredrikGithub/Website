@@ -1,17 +1,17 @@
 const Movie = {
-    title: "Movie",
-    name: "Movie",
-    type: "document",
+    title: 'movie',
+    name: 'movie',
+    type: 'document',
     fields: [
         {
-        name: "title",
-        type: "string"
+        name: 'title',
+        type: 'string'
         },
         {
-        title: 'Actor',
-        name: 'Actor',
+        title: 'actor',
+        name: 'actor',
         type: 'reference',
-        to: [{type: 'Actor'}]
+        to: [{type: 'actor'}]
         }
     ]
 }

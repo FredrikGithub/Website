@@ -1,9 +1,9 @@
 import client from './Client'
 
 
-const movieFields = 'title, actor'
+const movieFields = `title, 'actor':actor->name`;
 
-const getMovies = async () =>{
+export const getMovies = async () =>{
     const data = await client.fetch(`*[_type == "movie"]{${movieFields}}`);
     return data;
 };
@@ -12,4 +12,3 @@ const getMovies = async () =>{
     const data = await client.fetch(`*[_type == "movie"]{${movieFields}}`);
     return data;
 };*/
-export default getMovies
