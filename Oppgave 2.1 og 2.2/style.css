@@ -19,17 +19,11 @@ body {
 }
 #main{
     width: 1000px;
-    left:25%;
     float:center;
-    position: absolute;
 }
-#titlelabel{
-    top: 4%;
-    position: absolute;
-}
+
 #titleinput{
     top: 7%;
-    position: absolute;
     width: 25%;
     height: 25px;
     text-size-adjust: 18px;
@@ -40,7 +34,6 @@ body {
 #textareatitle {
     position: absolute;
     top: 12%;
-
 }
 #ta1{
     width:  calc(47vw); 
